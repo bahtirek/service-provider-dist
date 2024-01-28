@@ -1,6 +1,6 @@
 @import "../base/breakpoints.scss";
 
-.modal {
+.attachment-modal {
   background-color: rgba(0,0,0,.4);
   bottom: 0;
   height: 100%;
@@ -23,40 +23,38 @@
       opacity: 1;
     }
   }
-  .modal-content {
-    background-color: #ffffff;
-    border-radius: 10px;
-    margin: 16px auto;
-    max-width: 800px;
-    position: relative;
+  .attachment-modal-content {
+    max-height: calc(90% - 70px);
+    max-width: 90%;
     transition: opacity 400ms ease-in-out;
     width: 100%;
     will-change: opacity;
-    display: inline-block;
-    text-align: left;
-    padding: 30px 20px;
-    max-height: calc(90% - 70px);
-    overflow: auto;
-    scrollbar-gutter: stable both-edges;
-    margin-top: -60px;
+    display: flex;
+    justify-content: center;
     @media (max-width: $screen-sm-max) {
-      padding: 20px 10px;
+      max-width: 100%;
     }
-    .modal-close {
-      position: absolute;
-      right: -4px;
-      top: 10px;
-      cursor: pointer;
-    }
-  }
 
-  ::-webkit-scrollbar {
-    width: 14px;
-  height: 14px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #c4c8c7;
-    border-radius: 15px;
-    border: 5px solid #fff;
+    img {
+      object-fit: contain;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
+
+    .attachment-modal-close {
+      position: absolute;
+      right: 40px;
+      top: 90px;
+      cursor: pointer;
+      color: white;
+      background: grey;
+      border-radius: 5px;
+      @media (max-width: $screen-sm-max) {
+        right: 12px;
+        top: 70px;
+      }
+    }
   }
 }
