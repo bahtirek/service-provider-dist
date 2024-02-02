@@ -1,4 +1,8 @@
-.provider-card {
+@import "../base/breakpoints.scss";
+
+.provider-card.card {
+  padding: 15px 20px;
+  position: relative;
   li {
     padding: 3px 0;
     div {
@@ -17,6 +21,30 @@
       div {
         min-height: 0;
       }
+    }
+  }
+  .user-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    border: 1px solid #dadce0;
+    background-image: url('../../images/bola_avatar.png');
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @media (max-width: $screen-sm-max) {
+    padding: 6px 10px;
+    .user-avatar {
+      width: 50px;
+      height: 50px;
+      background-size: 70px 70px;
+    }
+  }
+  .more-btn-cta {
+    .material-symbols-outlined {
+      display: inline-block;
+      margin-bottom: -6px;
     }
   }
 }
