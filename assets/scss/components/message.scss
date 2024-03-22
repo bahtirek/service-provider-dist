@@ -38,6 +38,9 @@
     max-width: 90%;
     font-size: 14px;
     position: relative;
+    @media (max-width: $screen-sm-max) {
+      font-size: 16px;
+    }
     .reply-to-details {
       width: 250px;
       font-size: 12px;
@@ -53,6 +56,20 @@
       @media (max-width: $screen-sm-max) {
         width: auto;
       }
+      .file-image {
+        height: 35px;
+        width: 35px;
+        margin-left: -2px;
+      }
+    }
+    .edited-link {
+      font-size: 11px;
+      text-decoration: none;
+      box-shadow: none;
+      margin-left: auto;
+      height: initial;
+      display: block;
+      padding-bottom: 2px;
     }
   }
   .message-author, .message-date {
@@ -107,9 +124,6 @@
         margin-right: initial;
         background-color: #f3f3f3;
         text-align: left;
-        @media (max-width: $screen-sm-max) {
-          font-size: 16px;
-        }
       }
     }
     .message-author, .message-avatar {
