@@ -1,0 +1,1 @@
+import{V as o,hb as a}from"./chunk-TMRUMUQV.js";import"./chunk-JMZ7DUBM.js";var p=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=o({type:e,selectors:[["app-home"]],standalone:!0,features:[a],decls:0,vars:0,template:function(n,i){}});let t=e;return t})();export{p as HomeComponent};
